@@ -1,0 +1,4 @@
+crewai==1.15.44
+fastapi==0.165.0
+uvicorn[standard]
+python-dotenv

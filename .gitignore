@@ -221,3 +221,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---- Project-specific ----
+# Secrets: API keys live only in these files
+backend/.env
+frontend/.env
+
+# Python virtual environment
+backend/.venv/
+
+# React / Vite frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS / editor
+.DS_Store

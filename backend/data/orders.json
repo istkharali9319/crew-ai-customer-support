@@ -1,0 +1,50 @@
+{
+  "orders": [
+    {
+      "order_id": "101",
+      "customer_name": "Aarav Sharma",
+      "item": "Wireless Headphones",
+      "status": "Shipped",
+      "order_date": "2026-11-15",
+      "expected_delivery": "2026-11-24",
+      "carrier": "BlueDart",
+      "tracking_number": "BD123456789IN"
+    },
+    {
+      "order_id": "102",
+      "customer_name": "Priya Verma",
+      "item": "Running Shoes",
+      "status": "Delivered",
+      "order_date": "2026-11-10",
+      "delivered_on": "2026-11-14",
+      "carrier": "Delhivery",
+      "tracking_number": "DL987654321IN"
+    },
+    {
+      "order_id": "103",
+      "customer_name": "Rohan Mehta",
+      "item": "Smart Watch",
+      "status": "Processing",
+      "order_date": "2026-11-21",
+      "expected_delivery": "2026-11-28"
+    },
+    {
+      "order_id": "104",
+      "customer_name": "Sneha Iyer",
+      "item": "Coffee Maker",
+      "status": "Cancelled",
+      "order_date": "2026-11-12",
+      "cancel_reason": "Cancelled by customer"
+    },
+    {
+      "order_id": "105",
+      "customer_name": "Kabir Khan",
+      "item": "Backpack",
+      "status": "Out for Delivery",
+      "order_date": "2026-11-18",
+      "expected_delivery": "2026-11-22",
+      "carrier": "Ekart",
+      "tracking_number": "EK555666777IN"
+    }
+  ]
+}
