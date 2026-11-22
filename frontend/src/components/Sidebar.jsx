@@ -1,3 +1,5 @@
+import BotMascot from "./BotMascot.jsx";
+
 function StatusBadge({ isOnline }) {
   if (isOnline === null) {
     return (
@@ -30,8 +32,8 @@ export default function Sidebar({ isOpen, onClose, onNewChat, onClear, hasMessag
       >
         <div className="d-flex align-items-center justify-content-between p-3">
           <div className="d-flex align-items-center gap-2">
-            <span className="brand-icon d-inline-flex align-items-center justify-content-center rounded-3 bg-primary">
-              <i className="bi bi-headset" />
+            <span className="brand-icon d-inline-flex align-items-center justify-content-center rounded-3">
+              <BotMascot variant="head" size={32} title="" />
             </span>
             <div className="lh-sm">
               <div className="fw-semibold">Support Assistant</div>

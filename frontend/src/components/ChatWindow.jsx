@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import ChatMessage from "./ChatMessage.jsx";
 import TypingIndicator from "./TypingIndicator.jsx";
+import BotMascot from "./BotMascot.jsx";
 import { API_BASE_URL } from "../services/chatService.js";
 
 const EXAMPLES = [
@@ -14,12 +15,12 @@ function WelcomeScreen({ isOnline, onExampleClick }) {
   return (
     <div className="container py-5" style={{ maxWidth: 760 }}>
       <div className="text-center mb-4">
-        <span className="welcome-icon d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary mb-3">
-          <i className="bi bi-headset" />
-        </span>
-        <h1 className="h3 fw-semibold">How can I help you today?</h1>
+        <div className="mascot-hero mx-auto mb-3">
+          <BotMascot size={132} className="bot-float position-relative" />
+        </div>
+        <h1 className="h3 fw-semibold">Hi, I'm your Support Assistant!</h1>
         <p className="text-secondary mb-0">
-          Ask me about any order. Give me your order ID and I'll look it up.
+          Ask me about any order. Give me your order ID and I'll look it up for you.
         </p>
       </div>
 

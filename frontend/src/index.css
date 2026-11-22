@@ -41,20 +41,85 @@ body {
 }
 
 .brand-icon {
-  width: 36px;
-  height: 36px;
-  font-size: 1.1rem;
+  width: 40px;
+  height: 40px;
+  background: #e8efff;
+}
+
+/* ---------- Robot mascot ---------- */
+.mascot-hero {
+  position: relative;
+  width: 200px;
+  padding-top: 8px;
+}
+
+/* soft blue circle and wave behind the robot */
+.mascot-hero::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #dbe7ff 0%, #eef3ff 55%, rgba(238, 243, 255, 0) 72%);
+}
+
+.mascot-hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 120px;
+  height: 14px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(31, 86, 214, 0.12);
+  filter: blur(2px);
+}
+
+.bot-float {
+  animation: bot-float 3.2s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes bot-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* the robot blinks now and then */
+.bot-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bot-blink 4.5s infinite;
+}
+
+@keyframes bot-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.15); }
+}
+
+.bot-avatar {
+  background: #e8efff;
+  border: 1px solid #d3e0ff;
+}
+
+/* the avatar bobs while the agent is "thinking" */
+.bot-bob {
+  animation: bot-bob 0.9s ease-in-out infinite;
+}
+
+@keyframes bot-bob {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(-2px) rotate(-6deg); }
+  75% { transform: translateY(-2px) rotate(6deg); }
 }
 
 /* ---------- Chat area ---------- */
 .chat-window {
   background: #f7f7f8;
-}
-
-.welcome-icon {
-  width: 64px;
-  height: 64px;
-  font-size: 1.75rem;
 }
 
 .example-card {
@@ -149,7 +214,10 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .typing-dots span,
-  .example-card {
+  .example-card,
+  .bot-float,
+  .bot-eyes,
+  .bot-bob {
     animation: none;
     transition: none;
   }
